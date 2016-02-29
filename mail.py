@@ -9,8 +9,8 @@ def send_confirmation():
     text= """This is a small python module to send mail. This text will be the body of the message.""" 
     msg = MIMEText(text, 'plain')
     msg['Subject'] = "The Subject" 
-    me ='markbr.wn@gmail.com'
-    msg['To'] = 'mark@oeno.io'
+    me ='from@gmail.com'
+    msg['To'] = 'to@domain.com'
     try:
         conn = SMTP('smtp.gmail.com')
         conn.set_debuglevel(True)
