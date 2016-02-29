@@ -14,7 +14,8 @@ def send_confirmation():
     try:
         conn = SMTP('smtp.gmail.com')
         conn.set_debuglevel(True)
-        conn.login('login (no @domain.com)', 'password')
+        #the 'login' does not use @gmail. Make sure it is just your login, and not the full e-mail address. 
+        conn.login('login')', 'password')
         try:
             conn.sendmail(me, me, msg.as_string())
         finally:
